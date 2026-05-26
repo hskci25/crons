@@ -1,0 +1,17 @@
+{
+  "slug": "user-search-service",
+  "starterTemplates": {
+    "src/main/java/com/crons/usersearch/service/UserSearchService.java": "package com.crons.usersearch.service;\n\nimport java.util.List;\n\npublic class UserSearchService {\n\n    private static final List<String> USERS = List.of(\n        \"alice\", \"alicia\", \"bob\", \"carol\", \"charlie\"\n    );\n\n    /** Case-insensitive prefix match; returns names sorted alphabetically. */\n    public List<String> findByPrefix(String prefix) {\n        throw new UnsupportedOperationException(\"Not implemented\");\n    }\n}\n"
+  },
+  "visibleTests": {
+    "src/test/java/com/crons/usersearch/service/UserSearchServiceTest.java": "package com.crons.usersearch.service;\n\nimport org.junit.jupiter.api.Test;\n\nimport java.util.List;\n\nimport static org.junit.jupiter.api.Assertions.*;\n\nclass UserSearchServiceTest {\n\n    private final UserSearchService service = new UserSearchService();\n\n    @Test\n    void findsAlPrefixMatches() {\n        assertEquals(List.of(\"alice\", \"alicia\"), service.findByPrefix(\"al\"));\n    }\n\n    @Test\n    void caseInsensitive() {\n        assertEquals(List.of(\"bob\"), service.findByPrefix(\"BO\"));\n    }\n}\n"
+  },
+  "hiddenTests": {
+    "src/test/java/com/crons/usersearch/service/UserSearchServiceHiddenTest.java": "package com.crons.usersearch.service;\n\nimport org.junit.jupiter.api.Test;\n\nimport static org.junit.jupiter.api.Assertions.*;\n\nclass UserSearchServiceHiddenTest {\n\n    private final UserSearchService service = new UserSearchService();\n\n    @Test\n    void emptyPrefixReturnsEmpty() {\n        assertTrue(service.findByPrefix(\"\").isEmpty());\n    }\n\n    @Test\n    void noMatchReturnsEmpty() {\n        assertTrue(service.findByPrefix(\"zzz\").isEmpty());\n    }\n}\n"
+  },
+  "readonlyFiles": {
+    "pom.xml": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project xmlns=\"http://maven.apache.org/POM/4.0.0\"\n         xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\n         xsi:schemaLocation=\"http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd\">\n  <modelVersion>4.0.0</modelVersion>\n  <groupId>com.crons</groupId>\n  <artifactId>user-search-service</artifactId>\n  <version>0.0.1-SNAPSHOT</version>\n  <name>user-search-service</name>\n  <properties>\n    <java.version>17</java.version>\n  </properties>\n</project>\n",
+    "src/main/java/com/crons/usersearch/UserSearchApplication.java": "package com.crons.usersearch;\n\npublic class UserSearchApplication {\n    public static void main(String[] args) {\n    }\n}\n",
+    "src/main/java/com/crons/usersearch/api/UserSearchController.java": "package com.crons.usersearch.api;\n\nimport com.crons.usersearch.service.UserSearchService;\nimport java.util.List;\n\npublic class UserSearchController {\n\n    private final UserSearchService service = new UserSearchService();\n\n    public List<String> findByPrefix(String prefix) {\n        return service.findByPrefix(prefix);\n    }\n}\n"
+  }
+}

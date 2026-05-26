@@ -1,0 +1,17 @@
+{
+  "slug": "rate-limiter-service",
+  "starterTemplates": {
+    "src/main/java/com/crons/ratelimiter/service/RateLimiterService.java": "package com.crons.ratelimiter.service;\n\npublic class RateLimiterService {\n\n    private int requestCount = 0;\n    private final int maxRequests;\n\n    public RateLimiterService() {\n        this(10);\n    }\n\n    public RateLimiterService(int maxRequests) {\n        this.maxRequests = maxRequests;\n    }\n\n    /** Returns true if the request is allowed under the limit. */\n    public boolean allowRequest() {\n        // BUG: uses > instead of >= — allows one extra request past the limit\n        if (requestCount > maxRequests) {\n            return false;\n        }\n        requestCount++;\n        return true;\n    }\n\n    public void reset() {\n        requestCount = 0;\n    }\n}\n"
+  },
+  "visibleTests": {
+    "src/test/java/com/crons/ratelimiter/service/RateLimiterServiceTest.java": "package com.crons.ratelimiter.service;\n\nimport org.junit.jupiter.api.Test;\n\nimport static org.junit.jupiter.api.Assertions.*;\n\nclass RateLimiterServiceTest {\n\n    @Test\n    void allowsRequestsUpToLimit() {\n        RateLimiterService limiter = new RateLimiterService(3);\n        assertTrue(limiter.allowRequest());\n        assertTrue(limiter.allowRequest());\n        assertTrue(limiter.allowRequest());\n        assertFalse(limiter.allowRequest());\n    }\n\n    @Test\n    void resetClearsCount() {\n        RateLimiterService limiter = new RateLimiterService(2);\n        assertTrue(limiter.allowRequest());\n        assertTrue(limiter.allowRequest());\n        assertFalse(limiter.allowRequest());\n        limiter.reset();\n        assertTrue(limiter.allowRequest());\n    }\n}\n"
+  },
+  "hiddenTests": {
+    "src/test/java/com/crons/ratelimiter/service/RateLimiterServiceHiddenTest.java": "package com.crons.ratelimiter.service;\n\nimport org.junit.jupiter.api.Test;\n\nimport static org.junit.jupiter.api.Assertions.*;\n\nclass RateLimiterServiceHiddenTest {\n\n    @Test\n    void limitOfOneAllowsSingleRequest() {\n        RateLimiterService limiter = new RateLimiterService(1);\n        assertTrue(limiter.allowRequest());\n        assertFalse(limiter.allowRequest());\n    }\n}\n"
+  },
+  "readonlyFiles": {
+    "pom.xml": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project xmlns=\"http://maven.apache.org/POM/4.0.0\"\n         xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\n         xsi:schemaLocation=\"http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd\">\n  <modelVersion>4.0.0</modelVersion>\n  <groupId>com.crons</groupId>\n  <artifactId>rate-limiter-service</artifactId>\n  <version>0.0.1-SNAPSHOT</version>\n  <name>rate-limiter-service</name>\n  <properties>\n    <java.version>17</java.version>\n  </properties>\n</project>\n",
+    "src/main/java/com/crons/ratelimiter/RateLimiterApplication.java": "package com.crons.ratelimiter;\n\npublic class RateLimiterApplication {\n    public static void main(String[] args) {\n    }\n}\n",
+    "src/main/java/com/crons/ratelimiter/api/RateLimiterController.java": "package com.crons.ratelimiter.api;\n\nimport com.crons.ratelimiter.service.RateLimiterService;\n\npublic class RateLimiterController {\n\n    private final RateLimiterService service = new RateLimiterService();\n\n    public boolean allowRequest() {\n        return service.allowRequest();\n    }\n}\n"
+  }
+}

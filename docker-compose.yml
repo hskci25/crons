@@ -1,0 +1,13 @@
+services:
+  java-runner:
+    build: ./runner
+    image: crons-java-runner
+    ports:
+      - "8787:8787"
+    environment:
+      RUNNER_PORT: 8787
+      USE_DOCKER: "false"
+    entrypoint: ["node", "index.js"]
+    working_dir: /app
+    volumes:
+      - ./runner:/app

@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/jetbrains-mono@1.0.6/css/jetbrains-mono.min.css" rel="stylesheet"/>
+<style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+        
+        :root {
+            --font-geist: 'Inter', sans-serif;
+            --font-mono: 'JetBrains Mono', monospace;
+        }
+
+        body {
+            background-color: #0F0F0F;
+            font-family: var(--font-geist);
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .font-headline-lg { font-family: var(--font-geist); }
+        .font-headline-md { font-family: var(--font-geist); }
+        .font-headline-sm { font-family: var(--font-geist); }
+        .font-body-md { font-family: var(--font-geist); }
+        .font-code-md { font-family: var(--font-mono); }
+        .font-label-sm { font-family: var(--font-mono); }
+
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        /* Strict grid alignment for the 4px baseline */
+        .grid-bg {
+            background-image: linear-gradient(#1A1A1A 1px, transparent 1px), linear-gradient(90deg, #1A1A1A 1px, transparent 1px);
+            background-size: 32px 32px;
+        }
+
+        .scroll-smooth {
+            scroll-behavior: smooth;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-tertiary": "#003257",
+                      "inverse-surface": "#e5e2e1",
+                      "on-primary": "#522300",
+                      "surface-variant": "#353534",
+                      "surface-container-high": "#2a2a2a",
+                      "tertiary-fixed-dim": "#9dcaff",
+                      "on-secondary-fixed": "#1a1c1c",
+                      "on-primary-fixed-variant": "#743500",
+                      "surface-container-lowest": "#0e0e0e",
+                      "on-error": "#690005",
+                      "error-container": "#93000a",
+                      "tertiary-fixed": "#d1e4ff",
+                      "surface-container-highest": "#353534",
+                      "inverse-on-surface": "#313030",
+                      "surface-dim": "#131313",
+                      "secondary-container": "#454747",
+                      "surface-tint": "#ffb68a",
+                      "primary": "#ffb68a",
+                      "secondary-fixed-dim": "#c6c6c6",
+                      "on-error-container": "#ffdad6",
+                      "tertiary": "#9dcaff",
+                      "on-background": "#e5e2e1",
+                      "inverse-primary": "#984700",
+                      "surface-container-low": "#1c1b1b",
+                      "on-primary-container": "#4b2000",
+                      "on-tertiary-fixed-variant": "#00497c",
+                      "background": "#131313",
+                      "on-secondary-fixed-variant": "#454747",
+                      "primary-container": "#e8720c",
+                      "on-secondary": "#2f3131",
+                      "outline-variant": "#574236",
+                      "primary-fixed": "#ffdbc8",
+                      "on-tertiary-container": "#002e51",
+                      "on-surface": "#e5e2e1",
+                      "on-surface-variant": "#dec1b0",
+                      "surface": "#131313",
+                      "primary-fixed-dim": "#ffb68a",
+                      "tertiary-container": "#0098f9",
+                      "outline": "#a68b7d",
+                      "on-secondary-container": "#b4b5b5",
+                      "secondary": "#c6c6c6",
+                      "surface-container": "#201f1f",
+                      "on-tertiary-fixed": "#001d35",
+                      "on-primary-fixed": "#321300",
+                      "error": "#ffb4ab",
+                      "surface-bright": "#3a3939",
+                      "secondary-fixed": "#e2e2e2"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "spacing": {
+                      "gutter": "16px",
+                      "unit": "4px",
+                      "container-max": "1280px",
+                      "margin": "24px"
+              },
+              "fontFamily": {
+                      "headline-lg-mobile": ["Inter"],
+                      "headline-md": ["Inter"],
+                      "headline-lg": ["Inter"],
+                      "headline-sm": ["Inter"],
+                      "body-md": ["Inter"],
+                      "label-sm": ["JetBrains Mono"],
+                      "body-lg": ["Inter"],
+                      "code-md": ["JetBrains Mono"]
+              },
+              "fontSize": {
+                      "headline-lg-mobile": ["24px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                      "headline-md": ["24px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                      "headline-lg": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+                      "headline-sm": ["18px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                      "body-md": ["14px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                      "label-sm": ["12px", {"lineHeight": "1.0", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                      "body-lg": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                      "code-md": ["14px", {"lineHeight": "1.6", "fontWeight": "400"}]
+              }
+            },
+          },
+        }
+    </script>
+</head>
+<body class="bg-background text-on-surface selection:bg-primary-container selection:text-on-primary-container scroll-smooth">
+<!-- TopNavBar -->
+<header class="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-outline-variant">
+<nav class="flex justify-between items-center h-[48px] px-margin max-w-container-max mx-auto">
+<div class="flex items-center gap-8">
+<span class="font-code-md text-code-md font-bold text-on-background tracking-tighter">Crons</span>
+<div class="hidden md:flex gap-6">
+<a class="text-on-surface-variant font-code-md text-code-md hover:text-primary transition-all duration-150" href="#">Challenges</a>
+<a class="text-on-surface-variant font-code-md text-code-md hover:text-primary transition-all duration-150" href="#">Docs</a>
+</div>
+</div>
+<button class="px-4 py-1 border border-outline text-on-surface font-code-md text-code-md hover:bg-surface-container-low transition-all active:scale-95">
+                Login
+            </button>
+</nav>
+</header>
+<main>
+<!-- Section 1: Minimal Hero -->
+<section class="h-screen w-full flex items-center justify-center bg-[#0F0F0F] relative overflow-hidden">
+<h1 class="font-code-md text-[18vw] md:text-[22vw] font-bold text-[#E8720C] leading-none tracking-tighter select-none z-10">CRONS</h1>
+<div class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce opacity-20">
+<span class="material-symbols-outlined text-4xl">keyboard_double_arrow_down</span>
+</div>
+</section>
+<!-- Section 2: Product Details -->
+<section class="min-h-screen w-full bg-background border-t border-outline-variant">
+<!-- Original Hero Content moved here -->
+<div class="px-margin max-w-container-max mx-auto pt-24 pb-16">
+<div class="max-w-3xl">
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-6">Practice the interviews that actually matter now.</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl mb-10">
+                    A platform for engineers to master repo-based technical interviews. Build real features, fix critical bugs, and optimize performance in production-grade codebases.
+                </p>
+<button class="bg-primary-container text-on-primary-container px-8 py-3 font-code-md text-code-md font-bold hover:brightness-90 transition-all active:scale-95">
+                    Start Practicing
+                </button>
+</div>
+</div>
+<!-- Product Preview (Split Panel) -->
+<section class="w-full border-y border-outline-variant bg-surface-container-lowest">
+<div class="max-w-container-max mx-auto flex flex-col md:flex-row min-h-[600px]">
+<!-- Spec Column -->
+<div class="flex-1 p-12 border-r border-outline-variant">
+<div class="flex items-center gap-2 mb-8">
+<span class="w-2 h-2 bg-primary-container"></span>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant">Technical Specification</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface mb-6">Task: Implement Distributed Rate Limiter</h2>
+<div class="space-y-6 font-body-md text-body-md text-on-surface-variant">
+<p class="">Modify the existing <code class="font-code-md bg-surface-container-high px-1 text-primary">/middleware/gatekeeper.go</code> to support Redis-backed sliding window rate limiting.</p>
+<ul class="list-none space-y-4">
+<li class="flex gap-3">
+<span class="font-code-md text-primary">01.</span>
+<span class="">Initialize Redis connection pool in the application bootstrapper.</span>
+</li>
+<li class="flex gap-3">
+<span class="font-code-md text-primary">02.</span>
+<span class="">Handle atomic increment operations with a 60-second TTL.</span>
+</li>
+<li class="flex gap-3">
+<span class="font-code-md text-primary">03.</span>
+<span class="">Ensure thread-safety across concurrent requests.</span>
+</li>
+</ul>
+</div>
+</div>
+<!-- Code Column -->
+<div class="flex-1 bg-[#0A0A0A] p-0 overflow-hidden flex flex-col">
+<div class="flex items-center justify-between px-4 py-2 border-b border-[#2A2A2A] bg-[#141414]">
+<span class="font-code-md text-label-sm text-on-surface-variant">gatekeeper_test.go</span>
+<div class="flex gap-1.5">
+<div class="w-2.5 h-2.5 bg-[#2A2A2A]"></div>
+<div class="w-2.5 h-2.5 bg-[#2A2A2A]"></div>
+<div class="w-2.5 h-2.5 bg-[#2A2A2A]"></div>
+</div>
+</div>
+<div class="p-6 font-code-md text-code-md leading-relaxed overflow-x-auto">
+<pre class="text-[#888]"><span class="text-primary">func</span> TestRateLimiter(t *testing.T) {
+    limiter := NewRedisLimiter(redisClient)
+    
+    <span class="text-[#555]">/* TODO: Implement test cases for burst handling */</span>
+    <span class="text-primary">for</span> i := <span class="text-primary">0</span>; i &lt; <span class="text-primary">100</span>; i++ {
+        allowed, err := limiter.Allow(<span class="text-on-surface-variant">"user_123"</span>)
+        <span class="text-primary">if</span> err != nil {
+            t.Fatalf(<span class="text-on-surface-variant">"Unexpected error: %v"</span>, err)
+        }
+        <span class="text-primary">if</span> i &gt;= <span class="text-primary">60</span> &amp;&amp; allowed {
+            t.Errorf(<span class="text-on-surface-variant">"Expected block after 60 requests"</span>)
+        }
+    }
+}</pre>
+</div>
+</div>
+</div>
+</section>
+<!-- Features Section -->
+<section class="px-margin max-w-container-max mx-auto py-24">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-16">
+<div>
+<h3 class="font-code-md text-code-md font-bold text-primary mb-4 uppercase tracking-wider">Real Repo Challenges</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Stop solving LeetCode puzzles. Practice in production-ready repos with complex architectures, legacy debt, and modern toolchains.</p>
+</div>
+<div>
+<h3 class="font-code-md text-code-md font-bold text-primary mb-4 uppercase tracking-wider">Built-in Assistant</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Get contextual hints and code reviews that simulate a real Senior Engineer feedback loop without giving away the solution.</p>
+</div>
+<div>
+<h3 class="font-code-md text-code-md font-bold text-primary mb-4 uppercase tracking-wider">Timed Intervals</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Simulate the pressure of a live technical screen with customizable time boxes and environment constraints.</p>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="border-t border-outline-variant bg-surface-container-low py-32 text-center">
+<div class="px-margin max-w-container-max mx-auto">
+<h2 class="font-headline-md text-headline-md text-on-surface mb-8">Ready to level up?</h2>
+<button class="bg-primary-container text-on-primary-container px-10 py-4 font-code-md text-code-md font-bold hover:brightness-90 transition-all active:scale-95">
+                    Start Your First Challenge
+                </button>
+</div>
+</section>
+</section>
+</main>
+<!-- Footer -->
+<footer class="border-t border-outline-variant bg-background">
+<div class="flex justify-between items-center py-gutter px-margin max-w-container-max mx-auto">
+<div class="flex flex-col md:flex-row items-start md:items-center gap-8">
+<span class="font-code-md text-code-md text-on-background font-bold">Crons</span>
+<div class="flex gap-6">
+<a class="text-on-surface-variant font-code-md text-code-md hover:text-primary underline decoration-primary transition-all" href="#">Privacy</a>
+<a class="text-on-surface-variant font-code-md text-code-md hover:text-primary underline decoration-primary transition-all" href="#">Terms</a>
+<a class="text-on-surface-variant font-code-md text-code-md hover:text-primary underline decoration-primary transition-all" href="#">Support</a>
+</div>
+</div>
+<div class="hidden md:block">
+<span class="font-code-md text-label-sm text-on-surface-variant opacity-50">© 2024 Crons</span>
+</div>
+</div>
+</footer>
+<!-- Background Decoration (Subtle) -->
+<div class="fixed inset-0 pointer-events-none -z-10 grid-bg opacity-[0.03]"></div>
+</body></html>

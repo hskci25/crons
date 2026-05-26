@@ -1,0 +1,17 @@
+{
+  "slug": "discount-calculator-service",
+  "starterTemplates": {
+    "src/main/java/com/crons/discountcalculator/service/DiscountCalculatorService.java": "package com.crons.discountcalculator.service;\n\npublic class DiscountCalculatorService {\n\n    /**\n     * Apply tiered discount: 0% under $50, 10% for $50–$99.99, 20% for $100+.\n     * Returns final price after discount (rounded to 2 decimal places via cents).\n     */\n    public long applyDiscountCents(long subtotalCents) {\n        throw new UnsupportedOperationException(\"Not implemented\");\n    }\n}\n"
+  },
+  "visibleTests": {
+    "src/test/java/com/crons/discountcalculator/service/DiscountCalculatorServiceTest.java": "package com.crons.discountcalculator.service;\n\nimport org.junit.jupiter.api.Test;\n\nimport static org.junit.jupiter.api.Assertions.*;\n\nclass DiscountCalculatorServiceTest {\n\n    private final DiscountCalculatorService service = new DiscountCalculatorService();\n\n    @Test\n    void noDiscountUnderFiftyDollars() {\n        assertEquals(4999, service.applyDiscountCents(4999));\n    }\n\n    @Test\n    void tenPercentAtFiftyDollars() {\n        assertEquals(4500, service.applyDiscountCents(5000));\n    }\n}\n"
+  },
+  "hiddenTests": {
+    "src/test/java/com/crons/discountcalculator/service/DiscountCalculatorServiceHiddenTest.java": "package com.crons.discountcalculator.service;\n\nimport org.junit.jupiter.api.Test;\n\nimport static org.junit.jupiter.api.Assertions.*;\n\nclass DiscountCalculatorServiceHiddenTest {\n\n    private final DiscountCalculatorService service = new DiscountCalculatorService();\n\n    @Test\n    void twentyPercentAtOneHundredDollars() {\n        assertEquals(8000, service.applyDiscountCents(10000));\n    }\n\n    @Test\n    void rejectsNegativeSubtotal() {\n        assertThrows(IllegalArgumentException.class, () -> service.applyDiscountCents(-1));\n    }\n}\n"
+  },
+  "readonlyFiles": {
+    "pom.xml": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project xmlns=\"http://maven.apache.org/POM/4.0.0\"\n         xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\n         xsi:schemaLocation=\"http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd\">\n  <modelVersion>4.0.0</modelVersion>\n  <groupId>com.crons</groupId>\n  <artifactId>discount-calculator-service</artifactId>\n  <version>0.0.1-SNAPSHOT</version>\n  <name>discount-calculator-service</name>\n  <properties>\n    <java.version>17</java.version>\n  </properties>\n</project>\n",
+    "src/main/java/com/crons/discountcalculator/DiscountCalculatorApplication.java": "package com.crons.discountcalculator;\n\npublic class DiscountCalculatorApplication {\n    public static void main(String[] args) {\n    }\n}\n",
+    "src/main/java/com/crons/discountcalculator/api/DiscountCalculatorController.java": "package com.crons.discountcalculator.api;\n\nimport com.crons.discountcalculator.service.DiscountCalculatorService;\n\npublic class DiscountCalculatorController {\n\n    private final DiscountCalculatorService service = new DiscountCalculatorService();\n\n    public long applyDiscountCents(long subtotalCents) {\n        return service.applyDiscountCents(subtotalCents);\n    }\n}\n"
+  }
+}

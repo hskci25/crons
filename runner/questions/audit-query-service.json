@@ -1,0 +1,17 @@
+{
+  "slug": "audit-query-service",
+  "starterTemplates": {
+    "src/main/java/com/crons/auditquery/service/AuditQueryService.java": "package com.crons.auditquery.service;\n\nimport java.time.LocalDate;\nimport java.util.List;\nimport java.util.Map;\n\npublic class AuditQueryService {\n\n    private static final List<Map<String, Object>> EVENTS = List.of(\n        Map.of(\"id\", \"e1\", \"day\", LocalDate.of(2024, 1, 5)),\n        Map.of(\"id\", \"e2\", \"day\", LocalDate.of(2024, 1, 15)),\n        Map.of(\"id\", \"e3\", \"day\", LocalDate.of(2024, 2, 1))\n    );\n\n    /** Inclusive date range [from, to]. */\n    public List<String> eventIdsBetween(LocalDate from, LocalDate to) {\n        throw new UnsupportedOperationException(\"Not implemented\");\n    }\n}\n"
+  },
+  "visibleTests": {
+    "src/test/java/com/crons/auditquery/service/AuditQueryServiceTest.java": "package com.crons.auditquery.service;\n\nimport org.junit.jupiter.api.Test;\n\nimport java.time.LocalDate;\nimport java.util.List;\n\nimport static org.junit.jupiter.api.Assertions.*;\n\nclass AuditQueryServiceTest {\n\n    private final AuditQueryService service = new AuditQueryService();\n\n    @Test\n    void singleDayRange() {\n        assertEquals(List.of(\"e1\"),\n            service.eventIdsBetween(LocalDate.of(2024, 1, 5), LocalDate.of(2024, 1, 5)));\n    }\n\n    @Test\n    void monthRange() {\n        assertEquals(List.of(\"e1\", \"e2\"),\n            service.eventIdsBetween(LocalDate.of(2024, 1, 1), LocalDate.of(2024, 1, 31)));\n    }\n}\n"
+  },
+  "hiddenTests": {
+    "src/test/java/com/crons/auditquery/service/AuditQueryServiceHiddenTest.java": "package com.crons.auditquery.service;\n\nimport org.junit.jupiter.api.Test;\n\nimport java.time.LocalDate;\n\nimport static org.junit.jupiter.api.Assertions.*;\n\nclass AuditQueryServiceHiddenTest {\n\n    private final AuditQueryService service = new AuditQueryService();\n\n    @Test\n    void invalidRangeReturnsEmpty() {\n        assertTrue(service.eventIdsBetween(LocalDate.of(2024, 2, 1), LocalDate.of(2024, 1, 1)).isEmpty());\n    }\n\n    @Test\n    void nullDatesReturnEmpty() {\n        assertTrue(service.eventIdsBetween(null, LocalDate.now()).isEmpty());\n    }\n}\n"
+  },
+  "readonlyFiles": {
+    "pom.xml": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project xmlns=\"http://maven.apache.org/POM/4.0.0\"\n         xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\n         xsi:schemaLocation=\"http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd\">\n  <modelVersion>4.0.0</modelVersion>\n  <groupId>com.crons</groupId>\n  <artifactId>audit-query-service</artifactId>\n  <version>0.0.1-SNAPSHOT</version>\n  <name>audit-query-service</name>\n  <properties>\n    <java.version>17</java.version>\n  </properties>\n</project>\n",
+    "src/main/java/com/crons/auditquery/AuditQueryApplication.java": "package com.crons.auditquery;\n\npublic class AuditQueryApplication {\n    public static void main(String[] args) {\n    }\n}\n",
+    "src/main/java/com/crons/auditquery/api/AuditQueryController.java": "package com.crons.auditquery.api;\n\nimport com.crons.auditquery.service.AuditQueryService;\nimport java.util.List;\n\npublic class AuditQueryController {\n\n    private final AuditQueryService service = new AuditQueryService();\n\n    public List<String> eventIdsBetween(java.time.LocalDate from, java.time.LocalDate to) {\n        return service.eventIdsBetween(from, to);\n    }\n}\n"
+  }
+}

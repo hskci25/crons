@@ -1,0 +1,17 @@
+{
+  "slug": "notification-router-service",
+  "starterTemplates": {
+    "src/main/java/com/crons/notificationrouter/service/NotificationRouterService.java": "package com.crons.notificationrouter.service;\n\npublic class NotificationRouterService {\n\n    /**\n     * Route notification: use preferredChannel if set and non-blank,\n     * otherwise fall back to \"email\".\n     */\n    public String route(String preferredChannel) {\n        throw new UnsupportedOperationException(\"Not implemented\");\n    }\n}\n"
+  },
+  "visibleTests": {
+    "src/test/java/com/crons/notificationrouter/service/NotificationRouterServiceTest.java": "package com.crons.notificationrouter.service;\n\nimport org.junit.jupiter.api.Test;\n\nimport static org.junit.jupiter.api.Assertions.*;\n\nclass NotificationRouterServiceTest {\n\n    private final NotificationRouterService service = new NotificationRouterService();\n\n    @Test\n    void defaultsToEmailWhenBlank() {\n        assertEquals(\"email\", service.route(\"\"));\n        assertEquals(\"email\", service.route(null));\n    }\n\n    @Test\n    void usesPreferredChannel() {\n        assertEquals(\"sms\", service.route(\"sms\"));\n    }\n}\n"
+  },
+  "hiddenTests": {
+    "src/test/java/com/crons/notificationrouter/service/NotificationRouterServiceHiddenTest.java": "package com.crons.notificationrouter.service;\n\nimport org.junit.jupiter.api.Test;\n\nimport static org.junit.jupiter.api.Assertions.*;\n\nclass NotificationRouterServiceHiddenTest {\n\n    private final NotificationRouterService service = new NotificationRouterService();\n\n    @Test\n    void trimsAndLowercases() {\n        assertEquals(\"push\", service.route(\"  PUSH  \"));\n    }\n}\n"
+  },
+  "readonlyFiles": {
+    "pom.xml": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project xmlns=\"http://maven.apache.org/POM/4.0.0\"\n         xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\n         xsi:schemaLocation=\"http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd\">\n  <modelVersion>4.0.0</modelVersion>\n  <groupId>com.crons</groupId>\n  <artifactId>notification-router-service</artifactId>\n  <version>0.0.1-SNAPSHOT</version>\n  <name>notification-router-service</name>\n  <properties>\n    <java.version>17</java.version>\n  </properties>\n</project>\n",
+    "src/main/java/com/crons/notificationrouter/NotificationRouterApplication.java": "package com.crons.notificationrouter;\n\npublic class NotificationRouterApplication {\n    public static void main(String[] args) {\n    }\n}\n",
+    "src/main/java/com/crons/notificationrouter/api/NotificationRouterController.java": "package com.crons.notificationrouter.api;\n\nimport com.crons.notificationrouter.service.NotificationRouterService;\n\npublic class NotificationRouterController {\n\n    private final NotificationRouterService service = new NotificationRouterService();\n\n    public String route(String preferredChannel) {\n        return service.route(preferredChannel);\n    }\n}\n"
+  }
+}

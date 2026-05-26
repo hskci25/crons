@@ -1,0 +1,284 @@
+{
+  "screenshot": {
+    "name": "projects/3459930097535651455/files/bfd6d88c7389439fb4aad311d0b92271",
+    "downloadUrl": "https://lh3.googleusercontent.com/aida/ADBb0uhkLvVKbAVR2dSsXvg86ibn4g85TU3jsSon8nv6ecQqF3XeMW3qFYfGuBCKTD9QnMNZrRHnpyuy3oI0QarB-9u5m6Mwz2BaQ5QdWWUKw9COa_YmrBfJpE9Xi4EBev8FAhhapNsZgMSaPCpwF8FLPZ3iTWS783tYRLUInCrLeQAdlCv72EM_CJXjtsqgYVUvMqufutYZi5ZdOIYVCsbU16bHWq-FcDnBXTdgJynobMXk9-C65oyiuTnoxVU"
+  },
+  "htmlCode": {
+    "name": "projects/3459930097535651455/files/53cbb46b806d4810acf06c52726a8de0",
+    "downloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ7Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpaCiVodG1sXzljNWNlOTc1MzE5MTRiNTI4MjkyY2VkM2QyNGRiNWE0EgsSBxCxiYTB-QgYAZIBIwoKcHJvamVjdF9pZBIVQhMzNDU5OTMwMDk3NTM1NjUxNDU1&filename=&opi=89354086",
+    "mimeType": "text/html"
+  },
+  "id": "b708f1e4f03643a6bfa63364fd7884e3",
+  "generatedBy": "HatterAgent",
+  "width": "2560",
+  "height": "5478",
+  "title": "Landing Page - Split Layout",
+  "prompt": "Divide the landing page into two distinct full-height sections (100vh each). \n\nSection 1 (Hero): \n- Full height and width. \n- Center the text \"CRONS\" in a massive, bold monospace font using the accent color #E8720C. \n- No other text or buttons in this section. \n- Maintain the #0F0F0F background.\n\nSection 2 (Product Details): \n- Begins immediately after Section 1.\n- Move all existing landing page content (the original hero headline, subtext, CTA, product preview, and feature callouts) into this section.\n- Ensure the transition feels intentional and sharp, maintaining the existing design system styling (dark backgrounds, #2A2A2A borders, and Geist/Monospace fonts).\n\nKeep the TopNavBar visible at the top (fixed or sticky) and the Footer at the very bottom of the page.",
+  "name": "projects/3459930097535651455/screens/b708f1e4f03643a6bfa63364fd7884e3",
+  "theme": {
+    "colorMode": "DARK",
+    "font": "GEIST",
+    "roundness": "ROUND_FOUR",
+    "customColor": "#e8720c",
+    "headlineFont": "GEIST",
+    "bodyFont": "GEIST",
+    "labelFont": "JETBRAINS_MONO",
+    "namedColors": {
+      "on_error": "#690005",
+      "inverse_on_surface": "#313030",
+      "secondary_container": "#454747",
+      "tertiary": "#9dcaff",
+      "outline": "#a68b7d",
+      "on_secondary": "#2f3131",
+      "background": "#131313",
+      "inverse_surface": "#e5e2e1",
+      "on_primary_fixed_variant": "#743500",
+      "tertiary_container": "#0098f9",
+      "on_secondary_fixed": "#1a1c1c",
+      "on_secondary_fixed_variant": "#454747",
+      "on_primary_container": "#4b2000",
+      "surface_dim": "#131313",
+      "on_primary": "#522300",
+      "surface_variant": "#353534",
+      "tertiary_fixed_dim": "#9dcaff",
+      "on_error_container": "#ffdad6",
+      "primary_fixed_dim": "#ffb68a",
+      "on_secondary_container": "#b4b5b5",
+      "surface_container_low": "#1c1b1b",
+      "error": "#ffb4ab",
+      "primary": "#ffb68a",
+      "surface_container": "#201f1f",
+      "on_surface": "#e5e2e1",
+      "secondary_fixed": "#e2e2e2",
+      "error_container": "#93000a",
+      "inverse_primary": "#984700",
+      "tertiary_fixed": "#d1e4ff",
+      "surface_bright": "#3a3939",
+      "on_background": "#e5e2e1",
+      "surface_container_highest": "#353534",
+      "surface_container_lowest": "#0e0e0e",
+      "surface_tint": "#ffb68a",
+      "on_tertiary_fixed": "#001d35",
+      "secondary": "#c6c6c6",
+      "secondary_fixed_dim": "#c6c6c6",
+      "on_surface_variant": "#dec1b0",
+      "primary_fixed": "#ffdbc8",
+      "on_primary_fixed": "#321300",
+      "on_tertiary_fixed_variant": "#00497c",
+      "surface_container_high": "#2a2a2a",
+      "outline_variant": "#574236",
+      "primary_container": "#e8720c",
+      "on_tertiary": "#003257",
+      "on_tertiary_container": "#002e51",
+      "surface": "#131313"
+    },
+    "designMd": "---\nname: Crons\ncolors:\n  surface: '#131313'\n  surface-dim: '#131313'\n  surface-bright: '#3a3939'\n  surface-container-lowest: '#0e0e0e'\n  surface-container-low: '#1c1b1b'\n  surface-container: '#201f1f'\n  surface-container-high: '#2a2a2a'\n  surface-container-highest: '#353534'\n  on-surface: '#e5e2e1'\n  on-surface-variant: '#dec1b0'\n  inverse-surface: '#e5e2e1'\n  inverse-on-surface: '#313030'\n  outline: '#a68b7d'\n  outline-variant: '#574236'\n  surface-tint: '#ffb68a'\n  primary: '#ffb68a'\n  on-primary: '#522300'\n  primary-container: '#e8720c'\n  on-primary-container: '#4b2000'\n  inverse-primary: '#984700'\n  secondary: '#c6c6c6'\n  on-secondary: '#2f3131'\n  secondary-container: '#454747'\n  on-secondary-container: '#b4b5b5'\n  tertiary: '#9dcaff'\n  on-tertiary: '#003257'\n  tertiary-container: '#0098f9'\n  on-tertiary-container: '#002e51'\n  error: '#ffb4ab'\n  on-error: '#690005'\n  error-container: '#93000a'\n  on-error-container: '#ffdad6'\n  primary-fixed: '#ffdbc8'\n  primary-fixed-dim: '#ffb68a'\n  on-primary-fixed: '#321300'\n  on-primary-fixed-variant: '#743500'\n  secondary-fixed: '#e2e2e2'\n  secondary-fixed-dim: '#c6c6c6'\n  on-secondary-fixed: '#1a1c1c'\n  on-secondary-fixed-variant: '#454747'\n  tertiary-fixed: '#d1e4ff'\n  tertiary-fixed-dim: '#9dcaff'\n  on-tertiary-fixed: '#001d35'\n  on-tertiary-fixed-variant: '#00497c'\n  background: '#131313'\n  on-background: '#e5e2e1'\n  surface-variant: '#353534'\ntypography:\n  headline-lg:\n    fontFamily: Geist\n    fontSize: 32px\n    fontWeight: '600'\n    lineHeight: '1.2'\n    letterSpacing: -0.02em\n  headline-md:\n    fontFamily: Geist\n    fontSize: 24px\n    fontWeight: '600'\n    lineHeight: '1.2'\n    letterSpacing: -0.01em\n  headline-sm:\n    fontFamily: Geist\n    fontSize: 18px\n    fontWeight: '600'\n    lineHeight: '1.4'\n  body-lg:\n    fontFamily: Geist\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: '1.6'\n  body-md:\n    fontFamily: Geist\n    fontSize: 14px\n    fontWeight: '400'\n    lineHeight: '1.6'\n  code-md:\n    fontFamily: JetBrains Mono\n    fontSize: 14px\n    fontWeight: '400'\n    lineHeight: '1.6'\n  label-sm:\n    fontFamily: JetBrains Mono\n    fontSize: 12px\n    fontWeight: '500'\n    lineHeight: '1.0'\n    letterSpacing: 0.05em\n  headline-lg-mobile:\n    fontFamily: Geist\n    fontSize: 24px\n    fontWeight: '600'\n    lineHeight: '1.2'\nrounded:\n  sm: 0.125rem\n  DEFAULT: 0.25rem\n  md: 0.375rem\n  lg: 0.5rem\n  xl: 0.75rem\n  full: 9999px\nspacing:\n  unit: 4px\n  gutter: 16px\n  margin: 24px\n  container-max: 1280px\n---\n\n## Brand & Style\n\nThis design system is built for extreme focus and high-utility developer workflows. It adopts a **Minimalist** and **Structured** aesthetic, drawing inspiration from high-performance engineering environments. The personality is austere and intentional, prioritizing information density and legibility over decorative elements. \n\nThe emotional response should be one of control and reliability. By removing all non-functional ornamentation—such as gradients, shadows, and rounded \"pill\" shapes—the UI signals a no-nonsense toolset built for serious technical work. The aesthetic is \"dark-first,\" creating a high-contrast environment that reduces eye strain during long-form technical tasks.\n\n## Colors\n\nThe color palette is strictly functional, utilizing a monochromatic scale with a singular high-energy accent. \n\n- **Backgrounds:** A tiered system of near-blacks (`#0F0F0F` to `#222222`) defines spatial hierarchy without the need for shadows.\n- **Typography:** Three distinct grey levels ensure clear information architecture. Primary text is off-white to prevent \"halogen\" vibration against the dark background.\n- **Accent:** The orange (`#E8720C`) is used exclusively for primary calls to action, active states, and critical highlights. It must be used sparingly to maintain its effectiveness as a visual \"alert\" or \"focus\" mechanism.\n- **Borders:** All UI segmentation is handled by the subtle `#2A2A2A` border.\n\n## Typography\n\nThe typography strategy employs two highly technical typefaces: **Geist** for the interface and **JetBrains Mono** for data, labels, and the brand identity.\n\n- **Geist:** Used for all primary UI elements, body copy, and headlines. Its geometric precision matches the system's \"minimal\" energy.\n- **JetBrains Mono:** Used for anything requiring precise alignment or technical context—code blocks, timestamps, status labels, and the logotype.\n- **Scaling:** Headlines use tight letter spacing (`-0.02em`) to maintain a \"compressed\" professional feel, while labels use slightly expanded spacing for legibility at small sizes.\n\n## Layout & Spacing\n\nThis design system uses a strict **4px baseline grid** to ensure mathematical consistency across all components.\n\n- **Grid Model:** A 12-column fluid grid is used for main dashboard layouts, switching to a single-column stack on mobile.\n- **Margins & Gutters:** Fixed 16px gutters between cards and 24px outer margins for the viewport.\n- **Density:** The system favors a \"compact\" density. White space is used intentionally to separate logic blocks rather than for aesthetic \"breathability.\"\n- **Alignment:** Every element must align to the 4px grid. Components like inputs and buttons should consistently height-align (e.g., 32px or 40px heights).\n\n## Elevation & Depth\n\nDepth in this design system is achieved through **Tonal Layering** rather than shadows or light sources.\n\n- **Level 0 (Background):** `#0F0F0F` is the base canvas.\n- **Level 1 (Panels):** `#1A1A1A` is used for content cards, sidebars, and grouped sections.\n- **Level 2 (Active/Hover):** `#222222` is used for elevated elements like tooltips, dropdown menus, or active state backgrounds.\n- **Separation:** 1px solid borders (`#2A2A2A`) are required on all Level 1 and Level 2 surfaces to provide crisp definition against the background. Shadows are strictly prohibited.\n\n## Shapes\n\nThe shape language is **Sharp and Technical**. \n\n- **Radius:** A maximum corner radius of `4px` (represented by `roundedness: 1`) is applied to buttons, input fields, and cards. \n- **Internal Elements:** Smaller internal elements like checkboxes or selection indicators may use `0px` (sharp) corners to emphasize the \"engineered\" feel.\n- **Strictly Prohibited:** Any use of circular \"pills,\" large radii, or organic curves is disallowed.\n\n## Components\n\n### Buttons\n- **Primary:** Background `#E8720C`, Text `#0F0F0F` (high contrast), 4px radius.\n- **Secondary:** Background transparent, Border 1px `#2A2A2A`, Text `#E8E8E8`.\n- **States:** Hover state for secondary buttons should shift the background to `#222222`. Primary buttons should slightly darken the orange. No glows.\n\n### Inputs\n- **Field:** Background `#1A1A1A`, Border 1px `#2A2A2A`, Text `#E8E8E8`, Height 36px.\n- **Focus:** Border color changes to `#E8720C`. No outer glow.\n- **Monospace:** Input text should use `JetBrains Mono` for precise character tracking.\n\n### Cards & Panels\n- **Container:** Background `#1A1A1A`, Border 1px `#2A2A2A`.\n- **Header:** A 1px bottom-border separates the card header from the body.\n\n### Chips & Status Indicators\n- **Style:** Rectangular with 2px radius. \n- **Logic:** Success (Green), Warning (Yellow), Error (Red) should be used as subtle 8x8px square indicators or text-only labels in monospace, avoiding heavy background fills.\n\n### Lists & Tables\n- **Data Rows:** High-density, 32px or 40px row height. \n- **Dividers:** Horizontal lines only, using the `#2A2A2A` border color.",
+    "colorVariant": "FIDELITY",
+    "overridePrimaryColor": "#e8720c",
+    "overrideSecondaryColor": "#e8e8e8",
+    "overrideNeutralColor": "#0f0f0f",
+    "spacingScale": 2,
+    "typography": {
+      "headline-sm": {
+        "fontFamily": "Geist",
+        "fontSize": "18px",
+        "fontWeight": "600",
+        "lineHeight": "1.4"
+      },
+      "headline-lg-mobile": {
+        "fontFamily": "Geist",
+        "fontSize": "24px",
+        "fontWeight": "600",
+        "lineHeight": "1.2"
+      },
+      "body-md": {
+        "fontFamily": "Geist",
+        "fontSize": "14px",
+        "fontWeight": "400",
+        "lineHeight": "1.6"
+      },
+      "code-md": {
+        "fontFamily": "JetBrains Mono",
+        "fontSize": "14px",
+        "fontWeight": "400",
+        "lineHeight": "1.6"
+      },
+      "headline-lg": {
+        "fontFamily": "Geist",
+        "fontSize": "32px",
+        "fontWeight": "600",
+        "lineHeight": "1.2",
+        "letterSpacing": "-0.02em"
+      },
+      "body-lg": {
+        "fontFamily": "Geist",
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "lineHeight": "1.6"
+      },
+      "headline-md": {
+        "fontFamily": "Geist",
+        "fontSize": "24px",
+        "fontWeight": "600",
+        "lineHeight": "1.2",
+        "letterSpacing": "-0.01em"
+      },
+      "label-sm": {
+        "fontFamily": "JetBrains Mono",
+        "fontSize": "12px",
+        "fontWeight": "500",
+        "lineHeight": "1.0",
+        "letterSpacing": "0.05em"
+      }
+    },
+    "spacing": {
+      "gutter": "16px",
+      "unit": "4px",
+      "margin": "24px",
+      "container-max": "1280px"
+    },
+    "headlineFontFamily": "Geist",
+    "bodyFontFamily": "Geist",
+    "labelFontFamily": "Jetbrains Mono"
+  },
+  "deviceType": "DESKTOP",
+  "screenType": "DESIGN",
+  "screenMetadata": {
+    "agentType": "PRO_AGENT",
+    "status": "COMPLETE"
+  },
+  "designSystem": {
+    "name": "assets/9280f5a6b0604dbe97c46b4842b6f6e3",
+    "designSystem": {
+      "displayName": "Crons",
+      "styleGuidelines": "## Brand & Style\n\nThis design system is built for extreme focus and high-utility developer workflows. It adopts a **Minimalist** and **Structured** aesthetic, drawing inspiration from high-performance engineering environments. The personality is austere and intentional, prioritizing information density and legibility over decorative elements. \n\nThe emotional response should be one of control and reliability. By removing all non-functional ornamentation—such as gradients, shadows, and rounded \"pill\" shapes—the UI signals a no-nonsense toolset built for serious technical work. The aesthetic is \"dark-first,\" creating a high-contrast environment that reduces eye strain during long-form technical tasks.\n\n## Layout & Spacing\n\nThis design system uses a strict **4px baseline grid** to ensure mathematical consistency across all components.\n\n- **Grid Model:** A 12-column fluid grid is used for main dashboard layouts, switching to a single-column stack on mobile.\n- **Margins & Gutters:** Fixed 16px gutters between cards and 24px outer margins for the viewport.\n- **Density:** The system favors a \"compact\" density. White space is used intentionally to separate logic blocks rather than for aesthetic \"breathability.\"\n- **Alignment:** Every element must align to the 4px grid. Components like inputs and buttons should consistently height-align (e.g., 32px or 40px heights).\n\n## Elevation & Depth\n\nDepth in this design system is achieved through **Tonal Layering** rather than shadows or light sources.\n\n- **Level 0 (Background):** `#0F0F0F` is the base canvas.\n- **Level 1 (Panels):** `#1A1A1A` is used for content cards, sidebars, and grouped sections.\n- **Level 2 (Active/Hover):** `#222222` is used for elevated elements like tooltips, dropdown menus, or active state backgrounds.\n- **Separation:** 1px solid borders (`#2A2A2A`) are required on all Level 1 and Level 2 surfaces to provide crisp definition against the background. Shadows are strictly prohibited.\n\n## Components\n\n### Buttons\n- **Primary:** Background `#E8720C`, Text `#0F0F0F` (high contrast), 4px radius.\n- **Secondary:** Background transparent, Border 1px `#2A2A2A`, Text `#E8E8E8`.\n- **States:** Hover state for secondary buttons should shift the background to `#222222`. Primary buttons should slightly darken the orange. No glows.\n\n### Inputs\n- **Field:** Background `#1A1A1A`, Border 1px `#2A2A2A`, Text `#E8E8E8`, Height 36px.\n- **Focus:** Border color changes to `#E8720C`. No outer glow.\n- **Monospace:** Input text should use `JetBrains Mono` for precise character tracking.\n\n### Cards & Panels\n- **Container:** Background `#1A1A1A`, Border 1px `#2A2A2A`.\n- **Header:** A 1px bottom-border separates the card header from the body.\n\n### Chips & Status Indicators\n- **Style:** Rectangular with 2px radius. \n- **Logic:** Success (Green), Warning (Yellow), Error (Red) should be used as subtle 8x8px square indicators or text-only labels in monospace, avoiding heavy background fills.\n\n### Lists & Tables\n- **Data Rows:** High-density, 32px or 40px row height. \n- **Dividers:** Horizontal lines only, using the `#2A2A2A` border color.",
+      "theme": {
+        "colorMode": "DARK",
+        "font": "GEIST",
+        "roundness": "ROUND_FOUR",
+        "customColor": "#e8720c",
+        "headlineFont": "GEIST",
+        "bodyFont": "GEIST",
+        "labelFont": "JETBRAINS_MONO",
+        "namedColors": {
+          "on_secondary_fixed": "#1a1c1c",
+          "on_secondary_fixed_variant": "#454747",
+          "on_primary_container": "#4b2000",
+          "tertiary_container": "#0098f9",
+          "on_primary_fixed_variant": "#743500",
+          "inverse_surface": "#e5e2e1",
+          "background": "#131313",
+          "outline": "#a68b7d",
+          "on_secondary": "#2f3131",
+          "tertiary": "#9dcaff",
+          "inverse_on_surface": "#313030",
+          "secondary_container": "#454747",
+          "on_error": "#690005",
+          "primary": "#ffb68a",
+          "surface_container_low": "#1c1b1b",
+          "error": "#ffb4ab",
+          "on_secondary_container": "#b4b5b5",
+          "on_error_container": "#ffdad6",
+          "primary_fixed_dim": "#ffb68a",
+          "surface_variant": "#353534",
+          "tertiary_fixed_dim": "#9dcaff",
+          "surface_dim": "#131313",
+          "on_primary": "#522300",
+          "on_tertiary_fixed": "#001d35",
+          "secondary": "#c6c6c6",
+          "surface_container_lowest": "#0e0e0e",
+          "surface_tint": "#ffb68a",
+          "on_background": "#e5e2e1",
+          "surface_container_highest": "#353534",
+          "surface_bright": "#3a3939",
+          "error_container": "#93000a",
+          "inverse_primary": "#984700",
+          "tertiary_fixed": "#d1e4ff",
+          "on_surface": "#e5e2e1",
+          "secondary_fixed": "#e2e2e2",
+          "surface_container": "#201f1f",
+          "on_tertiary": "#003257",
+          "on_tertiary_container": "#002e51",
+          "surface": "#131313",
+          "primary_container": "#e8720c",
+          "outline_variant": "#574236",
+          "on_tertiary_fixed_variant": "#00497c",
+          "surface_container_high": "#2a2a2a",
+          "on_primary_fixed": "#321300",
+          "on_surface_variant": "#dec1b0",
+          "primary_fixed": "#ffdbc8",
+          "secondary_fixed_dim": "#c6c6c6"
+        },
+        "designMd": "---\nname: Crons\ncolors:\n  surface: '#131313'\n  surface-dim: '#131313'\n  surface-bright: '#3a3939'\n  surface-container-lowest: '#0e0e0e'\n  surface-container-low: '#1c1b1b'\n  surface-container: '#201f1f'\n  surface-container-high: '#2a2a2a'\n  surface-container-highest: '#353534'\n  on-surface: '#e5e2e1'\n  on-surface-variant: '#dec1b0'\n  inverse-surface: '#e5e2e1'\n  inverse-on-surface: '#313030'\n  outline: '#a68b7d'\n  outline-variant: '#574236'\n  surface-tint: '#ffb68a'\n  primary: '#ffb68a'\n  on-primary: '#522300'\n  primary-container: '#e8720c'\n  on-primary-container: '#4b2000'\n  inverse-primary: '#984700'\n  secondary: '#c6c6c6'\n  on-secondary: '#2f3131'\n  secondary-container: '#454747'\n  on-secondary-container: '#b4b5b5'\n  tertiary: '#9dcaff'\n  on-tertiary: '#003257'\n  tertiary-container: '#0098f9'\n  on-tertiary-container: '#002e51'\n  error: '#ffb4ab'\n  on-error: '#690005'\n  error-container: '#93000a'\n  on-error-container: '#ffdad6'\n  primary-fixed: '#ffdbc8'\n  primary-fixed-dim: '#ffb68a'\n  on-primary-fixed: '#321300'\n  on-primary-fixed-variant: '#743500'\n  secondary-fixed: '#e2e2e2'\n  secondary-fixed-dim: '#c6c6c6'\n  on-secondary-fixed: '#1a1c1c'\n  on-secondary-fixed-variant: '#454747'\n  tertiary-fixed: '#d1e4ff'\n  tertiary-fixed-dim: '#9dcaff'\n  on-tertiary-fixed: '#001d35'\n  on-tertiary-fixed-variant: '#00497c'\n  background: '#131313'\n  on-background: '#e5e2e1'\n  surface-variant: '#353534'\ntypography:\n  headline-lg:\n    fontFamily: Geist\n    fontSize: 32px\n    fontWeight: '600'\n    lineHeight: '1.2'\n    letterSpacing: -0.02em\n  headline-md:\n    fontFamily: Geist\n    fontSize: 24px\n    fontWeight: '600'\n    lineHeight: '1.2'\n    letterSpacing: -0.01em\n  headline-sm:\n    fontFamily: Geist\n    fontSize: 18px\n    fontWeight: '600'\n    lineHeight: '1.4'\n  body-lg:\n    fontFamily: Geist\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: '1.6'\n  body-md:\n    fontFamily: Geist\n    fontSize: 14px\n    fontWeight: '400'\n    lineHeight: '1.6'\n  code-md:\n    fontFamily: JetBrains Mono\n    fontSize: 14px\n    fontWeight: '400'\n    lineHeight: '1.6'\n  label-sm:\n    fontFamily: JetBrains Mono\n    fontSize: 12px\n    fontWeight: '500'\n    lineHeight: '1.0'\n    letterSpacing: 0.05em\n  headline-lg-mobile:\n    fontFamily: Geist\n    fontSize: 24px\n    fontWeight: '600'\n    lineHeight: '1.2'\nrounded:\n  sm: 0.125rem\n  DEFAULT: 0.25rem\n  md: 0.375rem\n  lg: 0.5rem\n  xl: 0.75rem\n  full: 9999px\nspacing:\n  unit: 4px\n  gutter: 16px\n  margin: 24px\n  container-max: 1280px\n---\n\n## Brand & Style\n\nThis design system is built for extreme focus and high-utility developer workflows. It adopts a **Minimalist** and **Structured** aesthetic, drawing inspiration from high-performance engineering environments. The personality is austere and intentional, prioritizing information density and legibility over decorative elements. \n\nThe emotional response should be one of control and reliability. By removing all non-functional ornamentation—such as gradients, shadows, and rounded \"pill\" shapes—the UI signals a no-nonsense toolset built for serious technical work. The aesthetic is \"dark-first,\" creating a high-contrast environment that reduces eye strain during long-form technical tasks.\n\n## Colors\n\nThe color palette is strictly functional, utilizing a monochromatic scale with a singular high-energy accent. \n\n- **Backgrounds:** A tiered system of near-blacks (`#0F0F0F` to `#222222`) defines spatial hierarchy without the need for shadows.\n- **Typography:** Three distinct grey levels ensure clear information architecture. Primary text is off-white to prevent \"halogen\" vibration against the dark background.\n- **Accent:** The orange (`#E8720C`) is used exclusively for primary calls to action, active states, and critical highlights. It must be used sparingly to maintain its effectiveness as a visual \"alert\" or \"focus\" mechanism.\n- **Borders:** All UI segmentation is handled by the subtle `#2A2A2A` border.\n\n## Typography\n\nThe typography strategy employs two highly technical typefaces: **Geist** for the interface and **JetBrains Mono** for data, labels, and the brand identity.\n\n- **Geist:** Used for all primary UI elements, body copy, and headlines. Its geometric precision matches the system's \"minimal\" energy.\n- **JetBrains Mono:** Used for anything requiring precise alignment or technical context—code blocks, timestamps, status labels, and the logotype.\n- **Scaling:** Headlines use tight letter spacing (`-0.02em`) to maintain a \"compressed\" professional feel, while labels use slightly expanded spacing for legibility at small sizes.\n\n## Layout & Spacing\n\nThis design system uses a strict **4px baseline grid** to ensure mathematical consistency across all components.\n\n- **Grid Model:** A 12-column fluid grid is used for main dashboard layouts, switching to a single-column stack on mobile.\n- **Margins & Gutters:** Fixed 16px gutters between cards and 24px outer margins for the viewport.\n- **Density:** The system favors a \"compact\" density. White space is used intentionally to separate logic blocks rather than for aesthetic \"breathability.\"\n- **Alignment:** Every element must align to the 4px grid. Components like inputs and buttons should consistently height-align (e.g., 32px or 40px heights).\n\n## Elevation & Depth\n\nDepth in this design system is achieved through **Tonal Layering** rather than shadows or light sources.\n\n- **Level 0 (Background):** `#0F0F0F` is the base canvas.\n- **Level 1 (Panels):** `#1A1A1A` is used for content cards, sidebars, and grouped sections.\n- **Level 2 (Active/Hover):** `#222222` is used for elevated elements like tooltips, dropdown menus, or active state backgrounds.\n- **Separation:** 1px solid borders (`#2A2A2A`) are required on all Level 1 and Level 2 surfaces to provide crisp definition against the background. Shadows are strictly prohibited.\n\n## Shapes\n\nThe shape language is **Sharp and Technical**. \n\n- **Radius:** A maximum corner radius of `4px` (represented by `roundedness: 1`) is applied to buttons, input fields, and cards. \n- **Internal Elements:** Smaller internal elements like checkboxes or selection indicators may use `0px` (sharp) corners to emphasize the \"engineered\" feel.\n- **Strictly Prohibited:** Any use of circular \"pills,\" large radii, or organic curves is disallowed.\n\n## Components\n\n### Buttons\n- **Primary:** Background `#E8720C`, Text `#0F0F0F` (high contrast), 4px radius.\n- **Secondary:** Background transparent, Border 1px `#2A2A2A`, Text `#E8E8E8`.\n- **States:** Hover state for secondary buttons should shift the background to `#222222`. Primary buttons should slightly darken the orange. No glows.\n\n### Inputs\n- **Field:** Background `#1A1A1A`, Border 1px `#2A2A2A`, Text `#E8E8E8`, Height 36px.\n- **Focus:** Border color changes to `#E8720C`. No outer glow.\n- **Monospace:** Input text should use `JetBrains Mono` for precise character tracking.\n\n### Cards & Panels\n- **Container:** Background `#1A1A1A`, Border 1px `#2A2A2A`.\n- **Header:** A 1px bottom-border separates the card header from the body.\n\n### Chips & Status Indicators\n- **Style:** Rectangular with 2px radius. \n- **Logic:** Success (Green), Warning (Yellow), Error (Red) should be used as subtle 8x8px square indicators or text-only labels in monospace, avoiding heavy background fills.\n\n### Lists & Tables\n- **Data Rows:** High-density, 32px or 40px row height. \n- **Dividers:** Horizontal lines only, using the `#2A2A2A` border color.",
+        "colorVariant": "FIDELITY",
+        "overridePrimaryColor": "#e8720c",
+        "overrideSecondaryColor": "#e8e8e8",
+        "overrideNeutralColor": "#0f0f0f",
+        "spacingScale": 2,
+        "typography": {
+          "body-lg": {
+            "fontFamily": "Geist",
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "lineHeight": "1.6"
+          },
+          "headline-md": {
+            "fontFamily": "Geist",
+            "fontSize": "24px",
+            "fontWeight": "600",
+            "lineHeight": "1.2",
+            "letterSpacing": "-0.01em"
+          },
+          "label-sm": {
+            "fontFamily": "JetBrains Mono",
+            "fontSize": "12px",
+            "fontWeight": "500",
+            "lineHeight": "1.0",
+            "letterSpacing": "0.05em"
+          },
+          "body-md": {
+            "fontFamily": "Geist",
+            "fontSize": "14px",
+            "fontWeight": "400",
+            "lineHeight": "1.6"
+          },
+          "headline-lg-mobile": {
+            "fontFamily": "Geist",
+            "fontSize": "24px",
+            "fontWeight": "600",
+            "lineHeight": "1.2"
+          },
+          "headline-sm": {
+            "fontFamily": "Geist",
+            "fontSize": "18px",
+            "fontWeight": "600",
+            "lineHeight": "1.4"
+          },
+          "headline-lg": {
+            "fontFamily": "Geist",
+            "fontSize": "32px",
+            "fontWeight": "600",
+            "lineHeight": "1.2",
+            "letterSpacing": "-0.02em"
+          },
+          "code-md": {
+            "fontFamily": "JetBrains Mono",
+            "fontSize": "14px",
+            "fontWeight": "400",
+            "lineHeight": "1.6"
+          }
+        },
+        "spacing": {
+          "gutter": "16px",
+          "unit": "4px",
+          "margin": "24px",
+          "container-max": "1280px"
+        },
+        "headlineFontFamily": "Geist",
+        "bodyFontFamily": "Geist",
+        "labelFontFamily": "Jetbrains Mono"
+      }
+    },
+    "version": "1"
+  }
+}

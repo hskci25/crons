@@ -1,0 +1,17 @@
+{
+  "slug": "pagination-service",
+  "starterTemplates": {
+    "src/main/java/com/crons/pagination/service/PaginationService.java": "package com.crons.pagination.service;\n\nimport java.util.ArrayList;\nimport java.util.List;\n\npublic class PaginationService {\n\n  /** page is 1-based. Returns items for the requested page. */\n  public <T> List<T> page(List<T> items, int page, int pageSize) {\n    if (items == null || items.isEmpty() || pageSize <= 0 || page < 1) {\n      return List.of();\n    }\n  int start = page * pageSize;\n    int end = Math.min(start + pageSize, items.size());\n    if (start >= items.size()) {\n      return List.of();\n    }\n    return new ArrayList<>(items.subList(start, end));\n  }\n}\n"
+  },
+  "visibleTests": {
+    "src/test/java/com/crons/pagination/service/PaginationServiceTest.java": "package com.crons.pagination.service;\n\nimport org.junit.jupiter.api.Test;\n\nimport java.util.List;\n\nimport static org.junit.jupiter.api.Assertions.*;\n\nclass PaginationServiceTest {\n\n    private final PaginationService service = new PaginationService();\n\n    @Test\n    void firstPage() {\n        List<String> all = List.of(\"a\", \"b\", \"c\", \"d\", \"e\");\n        assertEquals(List.of(\"a\", \"b\"), service.page(all, 1, 2));\n    }\n\n    @Test\n    void secondPage() {\n        List<String> all = List.of(\"a\", \"b\", \"c\", \"d\", \"e\");\n        assertEquals(List.of(\"c\", \"d\"), service.page(all, 2, 2));\n    }\n}\n"
+  },
+  "hiddenTests": {
+    "src/test/java/com/crons/pagination/service/PaginationServiceHiddenTest.java": "package com.crons.pagination.service;\n\nimport org.junit.jupiter.api.Test;\n\nimport java.util.List;\n\nimport static org.junit.jupiter.api.Assertions.*;\n\nclass PaginationServiceHiddenTest {\n\n    private final PaginationService service = new PaginationService();\n\n    @Test\n    void lastPartialPage() {\n        List<Integer> all = List.of(1, 2, 3, 4, 5);\n        assertEquals(List.of(5), service.page(all, 3, 2));\n    }\n\n    @Test\n    void pageBeyondEndReturnsEmpty() {\n        assertTrue(service.page(List.of(1, 2), 5, 2).isEmpty());\n    }\n}\n"
+  },
+  "readonlyFiles": {
+    "pom.xml": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project xmlns=\"http://maven.apache.org/POM/4.0.0\"\n         xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\n         xsi:schemaLocation=\"http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd\">\n  <modelVersion>4.0.0</modelVersion>\n  <groupId>com.crons</groupId>\n  <artifactId>pagination-service</artifactId>\n  <version>0.0.1-SNAPSHOT</version>\n  <name>pagination-service</name>\n  <properties>\n    <java.version>17</java.version>\n  </properties>\n</project>\n",
+    "src/main/java/com/crons/pagination/PaginationApplication.java": "package com.crons.pagination;\n\npublic class PaginationApplication {\n    public static void main(String[] args) {\n    }\n}\n",
+    "src/main/java/com/crons/pagination/api/PaginationController.java": "package com.crons.pagination.api;\n\nimport com.crons.pagination.service.PaginationService;\nimport java.util.List;\n\npublic class PaginationController {\n\n    private final PaginationService service = new PaginationService();\n\n    public <T> List<T> page(List<T> items, int page, int pageSize) {\n        return service.page(items, page, pageSize);\n    }\n}\n"
+  }
+}
