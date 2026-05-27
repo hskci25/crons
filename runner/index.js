@@ -7,7 +7,7 @@ import { spawn } from "child_process";
 import os from "os";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
-const PORT = Number(process.env.RUNNER_PORT || 8787);
+const PORT = Number(process.env.PORT || process.env.RUNNER_PORT || 8787);
 const RUNNER_SECRET = process.env.RUNNER_SECRET || "";
 const DOCKER_IMAGE = process.env.DOCKER_IMAGE || "crons-java-runner";
 /** Local JDK is the default; set USE_DOCKER=true only when Docker is installed. */
